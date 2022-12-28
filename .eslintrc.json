@@ -9,7 +9,6 @@
     /* import */
     "import/first": "error",
     "import/newline-after-import": "error",
-    "import/no-default-export": "error",
     "import/no-duplicates": "error",
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
@@ -17,16 +16,7 @@
 
     /* others */
     "sort-keys-custom-order/type-keys": ["error", { "orderedKeys": ["id"] }],
-    "sort-keys-custom-order/object-keys": ["error", { "orderedKeys": ["id"] }],
-    "overrides": [
-      {
-        "files": ["src/pages/**/*.tsx", "src/pages/api/**/*.ts", "next.config.mjs"],
-        "rules": {
-          // pages コンポーネントのデフォルトエクスポートを許可
-          "import/no-default-export": "off"
-        }
-      }
-    ]
+    "sort-keys-custom-order/object-keys": ["error", { "orderedKeys": ["id"] }]
   },
   "root": true
 }
