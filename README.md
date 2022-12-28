@@ -7,12 +7,12 @@
 
 # 使用技術
 
-- [Nextjs](https://nextjs.org/), [React](https://beta.reactjs.org/), [tailwindcss](tailwindcss)
+- [Nextjs](https://nextjs.org/), [React](https://beta.reactjs.org/), [tailwindcss](tailwindcss), etc
 
 # エンジニアでない方々へ
 
 - 基本的に Web(アプリ)開発ではこんな感じで、ソースコードを管理しています。
 - もし、興味があれば基本的には上の page フォルダの中身が基本的にコードを書いていき更新していくところになるので、そちらも見てもらえると嬉しいです。
-- （あと、~hour ago とか~days ago とかが近いフォルダほど、直近に更新されたものとなります）
+- （あと、hour ago とか days ago とかが近いフォルダほど、直近に更新されたものとなります）
 
 # 開発メモ
