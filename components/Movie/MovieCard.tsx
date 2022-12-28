@@ -10,7 +10,7 @@ export const MovieCard = (props: MovieCardProps) => {
   return (
     <Card shadow='sm' radius='md' withBorder className='mb-5'>
       <Card.Section>
-        <ReactPlayer url={props.movie.url} width='100%' />
+        <ReactPlayer url={props.movie.url} width='100%' controls />
       </Card.Section>
       <p className='mt-4 mb-0 font-semibold'>{props.movie.title}</p>
       <div className='flex justify-between mt-2 mb-1'>
