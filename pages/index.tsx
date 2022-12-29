@@ -11,7 +11,14 @@ const Home = () => {
     <>
       <Head>
         <title>オールマイティ・kのサイト（仮）</title>
-        <meta name='description' content='オールマイティ・kのサイト（仮）' />
+        <meta
+          name='description'
+          content='新しく使う技術の勉強・練習も兼ねて、自分のピアノ演奏動画、見たアニメリスト、弾いた・弾いてみたい曲リストetcなどを載せた簡易プロフィールサイトを作成します。'
+        />
+        <meta
+          name='twitter:image'
+          content='https://assets.coderrocketfuel.com/twitter-post-with-node-js.png'
+        />
       </Head>
       <div className='p-3 bg-cyan-800'>
         <h1 className='my-3.5 text-2xl font-bold text-center text-amber-300'>
