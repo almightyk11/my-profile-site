@@ -13,11 +13,19 @@ const Home = () => {
         <title>オールマイティ・kのサイト（仮）</title>
         <meta
           name='description'
-          content='新しく使う技術の勉強・練習も兼ねて、自分のピアノ演奏動画、見たアニメリスト、弾いた・弾いてみたい曲リストetcなどを載せた簡易プロフィールサイトを作成します。'
+          content='自分のピアノ演奏動画、見たアニメリスト、弾いた・弾いてみたい曲リストetcなどを載せた簡易プロフィールサイトを新しく使う技術の勉強・練習も兼ねて作成します。'
+        />
+
+        {/* twitter card link */}
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:title' content='オールマイティ・Kのプロフィールサイト（仮）' />
+        <meta
+          name='twitter:description'
+          content='自分のピアノ演奏動画、見たアニメリスト、弾いた・弾いてみたい曲リストetcなどを載せた簡易プロフィールサイトを新しく使う技術の勉強・練習も兼ねて作成します。'
         />
         <meta
           name='twitter:image'
-          content='https://assets.coderrocketfuel.com/twitter-post-with-node-js.png'
+          content='https://my-profile-site-khaki.vercel.app/twitter_card_link.jpg'
         />
       </Head>
       <div className='p-3 bg-cyan-800'>
