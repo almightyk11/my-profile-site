@@ -18,7 +18,7 @@ const Home = () => {
 
         {/* twitter card link */}
         <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:title' content='オールマイティ・Kのプロフィールサイト（仮）' />
+        <meta name='twitter:title' content='オールマイティ・Kのプロフィールサイト（作成中）' />
         <meta
           name='twitter:description'
           content='自分のピアノ演奏動画、見たアニメリスト、弾いた・弾いてみたい曲リストetcなどを載せた簡易プロフィールサイトを新しく使う技術の勉強・練習も兼ねて作成します。'
