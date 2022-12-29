@@ -21,16 +21,15 @@ export const MovieCardList = (props: MovieCardListProps) => {
 
   return (
     <div>
-      <div className='flex justify-center'>
-        <Select
-          searchable
-          onSearchChange={onSearchChange}
-          searchValue={searchValue}
-          defaultValue='全て'
-          data={['全て', 'クラシック', 'アニメ', 'その他']}
-          className='w-4/5 mb-5'
-        />
-      </div>
+      <Select
+        searchable
+        onSearchChange={onSearchChange}
+        searchValue={searchValue}
+        defaultValue='全て'
+        data={['全て', 'クラシック', 'アニメ', 'その他']}
+        className='mb-5'
+        classNames={{ input: 'text-[1rem]' }}
+      />
       {filteredMovies.map((movie) => (
         <MovieCard key={movie.id} movie={movie} />
       ))}
