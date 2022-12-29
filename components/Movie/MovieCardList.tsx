@@ -20,7 +20,7 @@ export const MovieCardList = (props: MovieCardListProps) => {
   )
 
   return (
-    <>
+    <div>
       <Select
         searchable
         onSearchChange={onSearchChange}
@@ -32,6 +32,6 @@ export const MovieCardList = (props: MovieCardListProps) => {
       {filteredMovies.map((movie) => (
         <MovieCard key={movie.id} movie={movie} />
       ))}
-    </>
+    </div>
   )
 }
