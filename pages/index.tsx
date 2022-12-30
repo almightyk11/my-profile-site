@@ -4,7 +4,7 @@ import Movie from 'interfaces/movie'
 import { mockMovies } from 'mock/movies'
 import Head from 'next/head'
 
-const movies: Movie[] = mockMovies
+const movies: Movie[] | undefined = mockMovies
 
 const Home = () => {
   return (

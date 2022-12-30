@@ -5,19 +5,18 @@ import { useMemo, useState } from 'react'
 import { MovieCard } from './MovieCard'
 
 type MovieCardListProps = {
-  movies: Movie[]
+  movies: Movie[] | undefined
 }
 
 export const MovieCardList = (props: MovieCardListProps) => {
   const [searchValue, onSearchChange] = useState('全て')
 
-  const filteredMovies = useMemo(
-    () =>
-      searchValue === '全て'
-        ? props.movies
-        : props.movies.filter((movie) => movie.category === searchValue),
-    [props.movies, searchValue],
-  )
+  const filteredMovies = useMemo(() => {
+    if (!props.movies) return []
+    return searchValue === '全て'
+      ? props.movies
+      : props.movies.filter((movie) => movie.category === searchValue)
+  }, [props.movies, searchValue])
 
   return (
     <div>
