@@ -39,10 +39,14 @@ const Home = () => {
           現状の実装：演奏動画3件ほど表示、スマホ版のみ
         </p>
       </div>
-      <Container className='py-3 bg-slate-200'>
-        <h2 className='text-xl text-center text-cyan-800'>演奏動画一覧</h2>
-        <MovieCardList movies={movies} />
-      </Container>
+
+      {/* 演奏動画一覧 */}
+      <section className='py-3 bg-slate-200'>
+        <Container>
+          <h2 className='text-xl text-center text-cyan-800'>演奏動画一覧</h2>
+          <MovieCardList movies={movies} />
+        </Container>
+      </section>
     </>
   )
 }
