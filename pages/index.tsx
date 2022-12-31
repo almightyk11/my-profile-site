@@ -25,7 +25,7 @@ const Home = () => {
         />
         <meta
           name='twitter:image'
-          content='https://my-profile-site-khaki.vercel.app/twitter_card_link.jpg'
+          content='https://my-profile-site-khaki.vercel.app/twitter_card.jpg'
         />
       </Head>
       <div className='p-3 bg-cyan-800'>
