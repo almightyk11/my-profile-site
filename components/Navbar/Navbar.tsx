@@ -1,14 +1,18 @@
-import { useEffect, useState } from 'react'
-import { IconContext } from 'react-icons'
-import { GiHamburgerMenu } from 'react-icons/gi'
+import { Burger } from '@mantine/core'
+import { useCallback, useEffect, useState } from 'react'
+
+import { SideMenu } from './SideMenu'
 
 export const Navbar = () => {
+  const [isOpened, setIsOpened] = useState(false)
   const [isShadow, setIsShadow] = useState(false)
 
   useEffect(() => {
     const handleIsShadow = () => (window.scrollY >= 56 ? setIsShadow(true) : setIsShadow(false))
     window.addEventListener('scroll', handleIsShadow)
   }, [])
+
+  const handleSetIsOpened = useCallback(() => setIsOpened((o) => !o), [])
 
   return (
     <div
@@ -18,9 +22,14 @@ export const Navbar = () => {
           : 'w-full fixed h-[3.5rem] z-[100] flex items-center justify-end px-[1rem] bg-cyan-800'
       }
     >
-      <IconContext.Provider value={{ color: '#cccccc', size: '2rem' }}>
-        <GiHamburgerMenu className='cursor-pointer' />
-      </IconContext.Provider>
+      <Burger
+        opened={isOpened}
+        onClick={handleSetIsOpened}
+        color='#cccccc'
+        size={25}
+        className='z-[200]'
+      />
+      <SideMenu isOpened={isOpened} handleSetIsOpened={handleSetIsOpened} />
     </div>
   )
 }
