@@ -28,7 +28,7 @@ const Home = () => {
           content='https://my-profile-site-khaki.vercel.app/twitter_card.jpg'
         />
       </Head>
-      <div className='p-3 bg-cyan-800'>
+      <div className='px-3  pt-[3.5rem] pb-3 bg-cyan-800'>
         <h1 className='my-3.5 text-2xl font-bold text-center text-amber-300'>
           オールマイティー・K
         </h1>
