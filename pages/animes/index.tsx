@@ -1,7 +1,18 @@
 import { Accordion, Container, Divider, Rating } from '@mantine/core'
-import { mockAnimeListByYear } from 'mock/animes'
+import { AnimeListByYears } from 'interfaces/anime'
+import { GetStaticProps, InferGetServerSidePropsType } from 'next'
+import { getAnimeListByYears } from 'services/anime/getAnimeListByYears'
 
-const Animes = () => {
+export const getStaticProps: GetStaticProps<{ animeListByYears: AnimeListByYears }> = async () => {
+  const animeListByYears: AnimeListByYears = (await getAnimeListByYears()) || []
+  return {
+    props: {
+      animeListByYears,
+    },
+  }
+}
+
+const Animes = ({ animeListByYears }: InferGetServerSidePropsType<typeof getStaticProps>) => {
   return (
     <section className='min-h-screen py-3 bg-slate-200'>
       <Container>
@@ -11,7 +22,7 @@ const Animes = () => {
           ※星つけてるのは特に好きということであって、星ないから嫌いというわけではないです。アニメ全般が好きです。
         </p>
         <Accordion variant='separated' disableChevronRotation>
-          {mockAnimeListByYear.map((animeList) => (
+          {animeListByYears.map((animeList) => (
             <Accordion.Item key={animeList.year} value={animeList.year}>
               <Accordion.Control>
                 <p className='m-0 font-semibold text-[1rem]'>{animeList.year}</p>

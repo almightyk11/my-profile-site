@@ -3,7 +3,7 @@ type Anime = {
   title: string
 }
 
-export type MockAnimeListByYear = {
+export type AnimeListByYears = {
   animes: Anime[]
   year: string
 }[]

@@ -1,7 +1,5 @@
-import { MockAnimeListByYear } from 'interfaces/anime'
-
 // api作成までの間直書きで対応
-export const mockAnimeListByYear: MockAnimeListByYear = [
+export const mockAnimeListByYear = [
   {
     animes: [
       {
