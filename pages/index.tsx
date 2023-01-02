@@ -1,12 +1,20 @@
 import { Container } from '@mantine/core'
 import { MovieCardList } from 'components/Movie'
 import Movie from 'interfaces/movie'
-import { mockMovies } from 'mock/movies'
+import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
+import { getMovies } from 'services/movie'
 
-const movies: Movie[] | undefined = mockMovies
+export const getStaticProps: GetStaticProps<{ movies: Movie[] }> = async () => {
+  const movies: Movie[] = (await getMovies()) || []
+  return {
+    props: {
+      movies,
+    },
+  }
+}
 
-const Home = () => {
+const Home = ({ movies }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
       <Head>
