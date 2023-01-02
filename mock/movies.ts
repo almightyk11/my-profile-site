@@ -107,6 +107,13 @@ export const movies: Movie[] = [
     title: '熱情3楽章(練習中)',
     url: 'https://youtube.com/shorts/Mxg8LfkHSBo',
   },
+  {
+    id: 16,
+    category: 'クラシック',
+    creator: 'F.リスト',
+    title: '愛の夢 第3番（冒頭、電子ピアノ録音）',
+    url: 'https://youtube.com/shorts/7BwDFhzkmQA',
+  },
 ]
 
 export const mockMovies: Movie[] = movies.sort((a, b) => b.id - a.id)
