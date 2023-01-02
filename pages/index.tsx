@@ -1,20 +1,20 @@
 import { Container } from '@mantine/core'
 import { MovieCardList } from 'components/Movie'
-import Movie from 'interfaces/movie'
-import { GetStaticProps, InferGetStaticPropsType } from 'next'
+import { mockMovies } from 'mock/movies'
 import Head from 'next/head'
-import { getMovies } from 'services/movie'
 
-export const getStaticProps: GetStaticProps<{ movies: Movie[] }> = async () => {
-  const movies: Movie[] = (await getMovies()) || []
-  return {
-    props: {
-      movies,
-    },
-  }
-}
+// SG（動画取得処理で止まってするので一旦保留）
+// export const getStaticProps: GetStaticProps<{ movies: Movie[] }> = async () => {
+//   const movies: Movie[] = (await getMovies()) || []
+//   return {
+//     props: {
+//       movies,
+//     },
+//   }
+// }
 
-const Home = ({ movies }: InferGetStaticPropsType<typeof getStaticProps>) => {
+// const Home = ({ movies }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Home = () => {
   return (
     <>
       <Head>
@@ -41,7 +41,7 @@ const Home = ({ movies }: InferGetStaticPropsType<typeof getStaticProps>) => {
       <section className='min-h-screen py-3 bg-slate-200'>
         <Container>
           <h2 className='text-xl text-center text-cyan-800'>演奏動画一覧</h2>
-          <MovieCardList movies={movies} />
+          <MovieCardList movies={mockMovies} />
         </Container>
       </section>
     </>
