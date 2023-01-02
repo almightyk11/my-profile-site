@@ -18,12 +18,12 @@ const MENU_LIST: { title: string; url: string }[] = [
 
 export const SideMenu = (props: SideMenuProps) => {
   return (
-    <div className={props.isOpened ? 'fixed top-0 left-0 h-screen w-full bg-black/70' : ''}>
+    <div className={props.isOpened ? 'fixed top-0 left-0 min-h-screen w-full bg-black/70' : ''}>
       <div
         className={
           props.isOpened
-            ? 'fixed top-0 left-0 w-[70%] h-screen ease-in duration-500 bg-slate-200 py-[0.75rem] px-[1rem]'
-            : 'fixed  top-0 left-[-100%] h-screen ease-in duration-500'
+            ? 'fixed top-0 left-0 w-[70%] min-h-screen ease-in duration-500 bg-slate-200 py-[0.75rem] px-[1rem]'
+            : 'fixed  top-0 left-[-100%] min-h-screen ease-in duration-500'
         }
       >
         <p className='font-bold text-cyan-800 text-[1.5rem] border border-indigo-600'>Menu</p>
