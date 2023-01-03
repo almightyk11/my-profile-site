@@ -6,10 +6,10 @@ const graphqlAPI = 'https://api-ap-northeast-1.hygraph.com/v2/clcebayic4q8w01uh5
 export const getAnimeListByYears = async () => {
   const query = gql`
     query AnimeListByYears {
-      animeListByYears {
+      animeListByYears(first: 30) {
         id
         year
-        animes(first: 100) {
+        animes(first: 30) {
           id
           title
           rating
