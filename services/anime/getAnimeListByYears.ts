@@ -13,6 +13,7 @@ export const getAnimeListByYears = async () => {
           id
           title
           rating
+          year
         }
       }
     }

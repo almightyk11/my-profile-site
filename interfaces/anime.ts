@@ -2,6 +2,7 @@ type Anime = {
   id: number
   rating: number
   title: string
+  year: number
 }
 
 export type AnimeListByYears = {
