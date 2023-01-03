@@ -9,7 +9,7 @@ export const getAnimeListByYears = async () => {
       animeListByYears {
         id
         year
-        animes {
+        animes(first: 100) {
           id
           title
           rating
