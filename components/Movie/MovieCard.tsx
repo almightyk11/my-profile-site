@@ -48,7 +48,7 @@ export const MovieCard = (props: MovieCardProps) => {
         title={props.movie.title}
         classNames={{ title: 'font-semibold' }}
       >
-        <ReactPlayer url={props.movie.url} width='100%' controls />
+        <ReactPlayer url={props.movie.url} width='100%' controls playing />
       </Modal>
     </Card>
   )
