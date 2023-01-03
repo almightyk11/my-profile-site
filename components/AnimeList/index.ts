@@ -1,0 +1,1 @@
+export { AnimeListByYearsComponent } from './AnimeListByYears'
