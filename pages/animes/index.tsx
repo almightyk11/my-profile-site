@@ -19,7 +19,9 @@ const Animes = ({ animeListByYears }: InferGetServerSidePropsType<typeof getStat
         <h2 className='text-xl text-center text-cyan-800'>見たアニメ一覧</h2>
         <p className='text-[0.9rem]'>※放送年については放送開始された年を基準にしてます。</p>
         <p className='text-[0.9rem]'>
-          ※星つけてるのは特に好きということであって、星ないから嫌いというわけではないです。アニメ全般が好きです。
+          ※星つけてるのは特に好きということであって、
+          <span className='text-pink-500'>星ないから嫌いというわけではないです。</span>
+          アニメ全般が好きです。
         </p>
         <Accordion variant='separated' disableChevronRotation>
           {animeListByYears.map((animeList) => (
